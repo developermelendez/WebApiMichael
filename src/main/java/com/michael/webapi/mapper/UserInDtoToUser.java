@@ -8,6 +8,7 @@ import com.michael.webapi.service.dto.UserInDto;
 @Component
 public class UserInDtoToUser implements IMapper<UserInDto,User>{
 
+    
     @Override
     public User map(UserInDto in) {        
         User user = new User();

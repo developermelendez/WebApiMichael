@@ -15,7 +15,7 @@ Make sure you have the following installed on your machine:
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/web-api.git
+    git clone https://github.com/developermelendez/web-api.git
     cd web-api
     ```
 
