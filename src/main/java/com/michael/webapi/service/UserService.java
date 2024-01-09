@@ -3,8 +3,10 @@ package com.michael.webapi.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
+import com.michael.webapi.exceptions.ToDoExceptions;
 import com.michael.webapi.mapper.UserInDtoToUser;
 import com.michael.webapi.persistence.entity.User;
 import com.michael.webapi.persistence.repository.UserRepository;
@@ -27,7 +29,7 @@ public class UserService {
             user = mapper.map(userInDto);
             user = this.repository.save(user);
         } catch (Exception e) {
-
+            throw new ToDoExceptions("failed to insert user", HttpStatus.BAD_REQUEST);
         }
         return user;
     }
@@ -39,7 +41,7 @@ public class UserService {
         try {
             users = repository.findAll();
         } catch (Exception e) {
-            
+            throw new ToDoExceptions("failed to get users", HttpStatus.BAD_REQUEST);
         }
         return users;
     }
