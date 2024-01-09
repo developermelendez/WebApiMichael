@@ -63,7 +63,6 @@ public class UserControllerTest {
 
     @Test
     public void testUsersEndpointEmptyList() throws Exception {
-        //findAllUsers return empty list
         mockMvc.perform(get("/api/users"))
                .andExpect(status().isOk())
                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
