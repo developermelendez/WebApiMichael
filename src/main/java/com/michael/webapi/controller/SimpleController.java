@@ -23,12 +23,12 @@ public class SimpleController {
         return "Hello, welcome to the Spring Boot REST API!";
     }
 
-    @GetMapping("/api/echo")
+    @GetMapping("/echo")
     public String echo(@RequestParam String message) {
         return message;
     }
 
-    @GetMapping("/api/square")
+    @GetMapping("/square")
     public double square(@RequestParam double number) {
         return mathService.square(number);
     }

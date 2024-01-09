@@ -17,4 +17,11 @@ public class User {
     private Long Id;
     private String Name;
 
+    public User(Long id, String name) {
+        Id = id;
+        Name = name;
+    }
+
+     public User() {}
+
 }
